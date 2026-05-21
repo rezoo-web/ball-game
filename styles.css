@@ -1,0 +1,77 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #0a0a0a;
+    color: #00f0ff;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(10, 10, 20, 0.95);
+    padding: 20px;
+    border: 2px solid #00f0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
+    text-align: center;
+}
+
+h1 { font-size: 3rem; letter-spacing: 8px; text-shadow: 0 0 20px #00f0ff; margin-bottom: 20px; }
+
+.screen { transition: opacity 0.5s; }
+.hidden { display: none; }
+
+.avatars {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 30px 0;
+}
+.avatar {
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 15px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.avatar:hover, .avatar.selected {
+    border-color: #00f0ff;
+    transform: scale(1.2);
+    box-shadow: 0 0 30px #00f0ff;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.title {
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+    text-shadow: 0 0 15px #00f0ff;
+}
+.score p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#pongCanvas {
+    border: 3px solid #00f0ff;
+    background: #050505;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+    image-rendering: pixelated; /* crisp feel */
+}
+
+.leaderboard {
+    margin-top: 15px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #00f0ff;
+    font-size: 0.9rem;
+}
