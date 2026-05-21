@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESLA PONG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Avatar Selection -->
+        <div id="avatarScreen" class="screen">
+            <h1>TESLA PONG</h1>
+            <p>Choose your Avatar</p>
+            <div class="avatars">
+                <div class="avatar" data-color="#00f0ff" onclick="selectAvatar(this)">🔵</div>
+                <div class="avatar" data-color="#ff00ff" onclick="selectAvatar(this)">🔴</div>
+                <div class="avatar" data-color="#00ff00" onclick="selectAvatar(this)">🟢</div>
+                <div class="avatar" data-color="#ffff00" onclick="selectAvatar(this)">🟡</div>
+            </div>
+            <button onclick="startGame()">START MISSION</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen hidden">
+            <div class="scoreboard">
+                <div class="score">
+                    <h2>PLAYER</h2>
+                    <p id="playerScore">0</p>
+                </div>
+                <div class="title">TESLA PONG <span id="level">LVL 1</span></div>
+                <div class="score">
+                    <h2>AI</h2>
+                    <p id="computerScore">0</p>
+                </div>
+            </div>
+            <canvas id="pongCanvas" width="800" height="450"></canvas>
+            
+            <div class="instructions">
+                <p><strong>Controls:</strong> Mouse Y or ↑↓ Arrows</p>
+                <button id="pauseBtn">PAUSE</button>
+                <button id="resetBtn">NEW MISSION</button>
+            </div>
+            
+            <div id="leaderboard" class="leaderboard">
+                <h3>HIGH SCORES</h3>
+                <ol id="highScoresList"></ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
